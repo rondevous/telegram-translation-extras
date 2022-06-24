@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         TG Translation Enhancements
-// @namespace    https://github.com/rondevous/telegram-translation-enhancements
-// @description  Adds useful keyboard shortcuts to the Telegram Translation Platform
+// @name         TG Translation Extras
+// @namespace    https://github.com/rondevous/telegram-translation-extras
+// @description  Adds extra UI/info to the Telegram Translation Platform
 // @author       Rondevous
 // @include      https://translations.telegram.org/*
-// @version      0.0.1
+// @version      0.0.2
 // @grant        none
 // @run-at       document-end
-// @downloadURL  https://github.com/rondevous/telegram-translation-enhancements/raw/master/telegram-translation-enhancements.user.js
-// @updateURL    https://github.com/rondevous/telegram-translation-enhancements/raw/master/telegram-translation-enhancements.user.js
+// @downloadURL  https://github.com/rondevous/telegram-translation-extras/raw/main/telegram-translations-extras.user.js
+// @updateURL    https://github.com/rondevous/telegram-translation-extras/raw/main/telegram-translations-extras.user.js
 // ==/UserScript==
 
 function AdvancedSearchHelp () {  
@@ -66,8 +66,8 @@ function AttachModalToBody () {
     </ol>
   </div>
   <div class="modal-footer">
-    <span style='color:grey;'>Documented by Sven Erik<br>
-    Note: Advanced search is native to the translation platform. This script is just an info-box</span>
+    <span style='color:grey;'>Note: Advanced search is native to the translation platform.<br>
+    This "extras" script does nothing to enable it.</span>
   </div>
   `)
 }
@@ -79,7 +79,6 @@ function AttachMutationProgress () {
   var progressObserver = new MutationObserver(function(mutationList){
     mutationList.forEach(function(mutation) {
       if (mutation.oldValue === 'width: 100%; transition: width 0.3s linear 0s, box-shadow 0.2s ease 0s; position: fixed; z-index: 1000; top: 0px; height: 3px; box-shadow: rgb(57, 173, 231) 0px 2px 0px inset;'){
-        console.log('passed: mutation.oldValue')
         if(mutation.target.style.boxShadow === 'rgb(57, 173, 231) 0px 0px 0px inset') {
           console.log('=== Re-attached Search Help Button ===')
           runAtDocumentLoadProgressComplete()
