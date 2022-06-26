@@ -37,43 +37,144 @@ function AttachModalToBody () {
   // Modal Content
   $('div[class="modal-content"]').append(`
   <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">New Advanced Search</h4>
+        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        <h5 class="modal-title">Telegram Translation Extras</h5>
   </div>
   <div class="modal-body">
-    <ol>
-    <li>
-    By default, search will now match <b>the beginning</b> of the words. <code>video voice</code> will find all phrases that contain words starting with <code>video*</code> AND words starting with <code>voice*</code> (like <code>videocalls in voicechats</code>).<br><br>
-    </li>
-    <li>
-    For <b>exact matches</b> Use "double quotes". The query <code>"video" "audio"</code> will find all phrases that have the words <code>video</code> AND <code>audio</code> \u2013 but not those that only have the words "videos" and "voices".<br><br>
-    </li>
-    <li>
-    If you want to find literal double quotes in your search, e.g. <code>set "show previews" to</code> \u2013 put the <code>\\</code> symbol before them. Like this: <code>set \\"show previews\\" to</code>. This also works for escaping any other search syntax signs.<br><br>
-    </li>
-    <li>
-    To search by substring like before, use round and square parentheses:<br>
-    <code>(est)</code> => T<b>est</b>, R<b>est</b>rict, and <b>Est</b>imate<br>
-    <code>[est)</code> => <b>Est</b>imate, but not T<b>est</b><br>
-    <code>(est]</code> => T<b>est</b>, but not <b>Est</b>imate<br><br>
-    </li>
-    <li>
-    You can <b>exclude</b> matches using the -minus sign. <code>Video -audio</code> will find all phrases that contain <code>video</code> but do not contain <code>audio</code>.<br><br>
-    </li>
-    <li>
-    On the right of the search bar, there is a new toggle that lets you control whether you're searching for matches in the <b>Text</b> only, <b>Key name</b> only \u2013 or <b>both</b>, like before.
-    </li>
-    </ol>
+    <div role="tabpanel">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+          <a href="#AdvancedSearchTab" aria-controls="AdvancedSearchTab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-search"></span> Advanced Search Info</a>
+          </li>
+          <li role="presentation">
+          <a href="#shortcutkeys" aria-controls="shortcutkeys" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-fast-forward"></span> Keyboard Shortcuts</a>
+          </li>
+          <li role="presentation">
+          <a href="#ExtraTools" aria-controls="ExtraTools" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span> Extra Tools</a>
+          </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="AdvancedSearchTab"><br>
+            <ol>
+              <li>
+              By default, search will now match <b>the beginning</b> of the words. <code>video voice</code> will find all phrases that contain words starting with <code>video*</code> AND words starting with <code>voice*</code> (like <code>videocalls in voicechats</code>).<br><br>
+              </li>
+              <li>
+              For <b>exact matches</b> Use "double quotes". The query <code>"video" "audio"</code> will find all phrases that have the words <code>video</code> AND <code>audio</code> \u2013 but not those that only have the words "videos" and "voices".<br><br>
+              </li>
+              <li>
+              If you want to find literal double quotes in your search, e.g. <code>set "show previews" to</code> \u2013 put the <code>\\</code> symbol before them. Like this: <code>set \\"show previews\\" to</code>. This also works for escaping any other search syntax signs.<br><br>
+              </li>
+              <li>
+              To search by substring like before, use round and square parentheses:<br>
+              <code>(est)</code> => T<b>est</b>, R<b>est</b>rict, and <b>Est</b>imate<br>
+              <code>[est)</code> => <b>Est</b>imate, but not T<b>est</b><br>
+              <code>(est]</code> => T<b>est</b>, but not <b>Est</b>imate<br><br>
+              </li>
+              <li>
+              You can <b>exclude</b> matches using the -minus sign. <code>Video -audio</code> will find all phrases that contain <code>video</code> but do not contain <code>audio</code>.<br><br>
+              </li>
+              <li>
+              On the right of the search bar, there is a new toggle that lets you control whether you're searching for matches in the <b>Text</b> only, <b>Key name</b> only \u2013 or <b>both</b>, like before.
+              </li>
+            </ol> <br><br>
+            <span style='color:grey;'>Note: Advanced search is native to the translation platform.<br>
+            "Telegram Translation Extras" does nothing to enable it.</span>
+          </div>
+          <!-- Shortcut keys -->
+          <div role="tabpanel" class="tab-pane" id="shortcutkeys"><br>
+            <table class="table table-stripped table-hover table-bordered">
+              <caption>
+                  <a data-toggle="tooltip" title="Install this script to activate these shortcuts" href="https://github.com/jurf/telegram-translation-shortcuts">jurf/Telegram-Translation-Shortcuts</a>
+              </caption>
+              <thead style="background-color: black; color: gold;">
+              <tr>
+                  <th>Shortcut Key</th>
+                  <th>Command</th>
+              </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td colspan="2" class="info">
+                          <i>On search results and single phrase pages</i>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><kbd>Ctrl+Enter</kbd> (or <kbd>y</kbd>)</td>
+                      <td>Apply top suggestion & go to next linked phrase</td>
+                  </tr>
+                  <tr>
+                      <td><kbd>1</kbd> to <kbd>5</kbd></td>
+                      <td>Apply n-th suggestion & move to next linked phrase</td>
+                  </tr>
+                  <tr>
+                      <td><kbd>Tab</kbd> /<kbd>Shift+Tab</kbd><br> (or <kbd>h</kbd> / <kbd>l</kbd>)</td>
+                      <td>Move to Next/Previous linked phrase</td>
+                  </tr>
+                  <tr>
+                      <td><kbd>PageUp</kbd> / <kbd>PageDown</kbd><br> (or <kbd>k</kbd> / <kbd>j</kbd>)</td>
+                      <td>Move up/down in search results</td>
+                  </tr>
+                  <tr>
+                      <td><kbd>Ctrl+A</kbd> (or <kbd>i</kbd>)</td>
+                      <td>Add a new translation</td>
+                  </tr>
+                  <tr>
+                      <td><kbd>Ctrl+E</kbd> (or <kbd>c</kbd>)</td>
+                      <td>Edit the first suggestion</td>
+                  </tr>
+                  <tr>
+                      <td><kbd>/</kbd></td>
+                      <td>Search</td>
+                  </tr>
+                  <tr>
+                      <td><kbd>Esc</kbd></td>
+                      <td>Cancel 'add translation'/comment</td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="info">
+                          <i>When importing strings on the import page</i>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><kbd>Ctrl+A</kbd></td>
+                      <td>Select/Deselect all phrases on import page</td>
+                  </tr>
+              </tbody>
+              <tfoot>
+                  <tr>
+                      <td colspan="2" class="warning"> <br>
+                          <span style="color:grey;">The above shortcuts are not native to the Translations platform.<br>
+                          You need to install <a href="https://github.com/jurf/telegram-translation-shortcuts">jurf/telegram-translation-shortcuts</a> to enable them</span>
+                      </td>
+                  </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <!-- TAB PANE 3-->
+          <div role="tabpanel" class="tab-pane" id="ExtraTools"><br>
+          Coming soon:  
+          Open and Translate Critical strings
+          </div>
+      </div>
+    </div>
   </div>
   <div class="modal-footer">
-    <span style='color:grey;'>Note: Advanced search is native to the translation platform.<br>
-    This "extras" script does nothing to enable it.</span>
+    FEEL DIZZY? 'Cause you were hit by a JOHN CENA!
   </div>
   `)
+  $("table, th, td").css({"border": "1px solid gray", "border-collapse": "collapse"})
 }
 
+/**
+ * Observes if the page has changed and calls runAtDocumentLoadProgressComplete()
+ */
 function AttachMutationProgress () {
-  // #aj-progress box-shadow => 'none' means it was loaded from browser address bar
+  // Watch progress bar to detect loading of new page
+  // #aj-progress box-shadow => 'none' means it was loaded from browser URL bar
   const ajprogressbar = document.querySelector('#aj_progress')
 
   var progressObserver = new MutationObserver(function(mutationList){

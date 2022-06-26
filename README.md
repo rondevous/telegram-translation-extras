@@ -1,16 +1,17 @@
 ## Telegram Translation Extras
-Adds extra UI elements for infomation purpose. Want shortcut-keys script? Install the [Telegram Translation Shortcuts](https://github.com/jurf/telegram-translation-shortcuts/)
+Adds extra UI elements for infomation purpose. Want keyboard shortcuts script? Install the [jurf/Telegram-Translation-Shortcuts](https://github.com/jurf/telegram-translation-shortcuts/)
 
 
-### What is available right now from this script?
+### What does this script do?
 
-- Adds a (?) help button to the search bar, and on clicking it, it shows details about the Advanced search
+- Adds a (?) help button to the search bar, and on clicking it, it shows details about the Advanced Search
+- Shows keyboard shortcuts used in [jurf/Telegram-Translation-Shortcuts](https://github.com/jurf/telegram-translation-shortcuts/)
 
 ### What to expect later?
 
-- a modal/dialog showing shortcut keys? i don't want to add too much clutter, let's see how it turns out (shrug)
+- critical strings!? let's see how it turns out (shrug)
 
-> Insert some hype careful enough to not disturb discipline  (prevention of overconfidence?)
+> Insert some hype careful enough to not disturb discipline  (prevention of overconfidence? I hope so)
 
 ## Installation
 
