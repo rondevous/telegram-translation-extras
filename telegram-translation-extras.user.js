@@ -461,7 +461,10 @@ function AttachModalToBody () {
 
           <!-- TAB PANE 3-->
           <div role="tabpanel" class="tab-pane" id="ExtraTools"><br>
-          <h3>#1: Translate Critical Phrases <button id="openCriticals" type="button" class="btn btn-lg btn-warning handle-tooltip" data-title="Critical phrases can only be translated by coordinators of official languages">Critical Phrases</button></h3>
+          <h3>#1: Navigate through Critical Phrases <button id="openCriticals" type="button" class="btn btn-lg btn-warning handle-tooltip" data-title="Critical phrases can be only translated by coordinators of official languages, though anyone can still leave suggestions">Open Critical Phrases</button></h3>
+          <h3>#2: Telegram Translation <a class="handle-tooltip" data-title="Frequently Asked Questions (unofficial docs) for Telegram Translators" href="https://www.notion.so/Telegram-Translation-FAQ-unofficial-556e6868895743eaa094cb75e0e31a76">FAQ (unofficial)</a></h3>
+          <h3>#3: <a href="https://www.microsoft.com/en-us/language">Microsoft Language portal for terminology</a></h3>
+          <h3>#4: <a href="https://telegra.ph/The-translators-guide-to-emojis-03-23">Translator's guide to Emojis</a></h3>
           </div>
       </div>
     </div>
@@ -495,7 +498,6 @@ function AttachMutationProgress () {
       }
     })
   })
-
   progressObserver.observe(ajprogressbar, {
     attributeFilter: ['style'],
     attributeOldValue: true
