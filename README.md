@@ -14,7 +14,7 @@ Adds extra tools/UI elements for convenience or information purpose. Want keyboa
 ## Installation
 
 1. Install [Violentmonkey](https://violentmonkey.github.io/get-it/), or similar browser extension
-2. Install the userscript [telegram-translation-extras](https://github.com/rondevous/telegram-translation-extra/raw/main/telegram-translation-extra.user.js)
+2. Install the userscript: [telegram-translation-extras](https://github.com/rondevous/telegram-translation-extra/raw/main/telegram-translation-extra.user.js)
 3. Enjoy! :slightly_smiling_face:
 
 ## Support
